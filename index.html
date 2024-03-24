@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="clipboard.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./manzana.png" type="image/x-icon">
+    <title>Pizarrón de Scripts</title>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCsGjzs6LZ-AVlsOTQlTV5Xwk6jGB9ud7w",
+            authDomain: "pizzaron-de-scripts.firebaseapp.com",
+            databaseURL: "https://pizzaron-de-scripts-default-rtdb.firebaseio.com",
+            projectId: "pizzaron-de-scripts",
+            storageBucket: "pizzaron-de-scripts.appspot.com",
+            messagingSenderId: "718498843948",
+            appId: "1:718498843948:web:2f3df59a93ea740cbd3089"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <h1>Pizarrón de Scripts</h1>
+    <textarea cols='80' rows='25' id="code"></textarea>
+    <br>
+    <br>
+    <button type="button" id="copyClip" data-clipboard-target="#code">Copiar Script</button>
+    <footer><span onclick="save()">Creado por Carmen Ortigoza</span></footer>
+    <script src="main.js"></script>
+</body>
+</html>
