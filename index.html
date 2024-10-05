@@ -28,13 +28,17 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
+
 <body>
-    <h1>Pizarrón de Scripts</h1>
-    <textarea cols='80' rows='25' id="code"></textarea>
-    <br>
-    <br>
-    <button type="button" id="copyClip" data-clipboard-target="#code">Copiar Script</button>
-    <footer><span onclick="save()">Creado por Carmen Ortigoza</span></footer>
+    <h1>Pizarrón de Código</h1>
+    <div id="board">
+        <textarea cols='80' rows='25' id="code"></textarea>
+    </div>
+    <button type="button" id="copyClip" data-clipboard-target="#code">Copiar Código</button>
+    <footer>
+        <span onclick="save()">Creado por Carmen Ortigoza</span>
+    </footer>
     <script src="main.js"></script>
 </body>
+
 </html>

@@ -8,37 +8,37 @@ body {
     padding: 0;
 }
 
+#board {
+    max-width: 80%;
+    margin: 0 auto;
+    aspect-ratio: 1.2;
+    max-height: 80vh;
+    background-size: 100% 100% !important;
+    background: url(./board_landscape.svg) no-repeat;
+}
+
 textarea {
+    margin-top: 4%;
+    width: 90%;
+    height: 74%;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
     color: #F6EDD9;
     border-radius: 10px;
     font-family: 'Tilt Neon', cursive;
     font-size: 19px;
-    background: url(./chalkboard.svg);
-    background-size: cover;
-    padding: 50px;
+    resize: none;
+    overflow: scroll;
 }
 
-textarea::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    display: none;
-    box-shadow: 1px 3px 5px rgba(63, 94, 251, 1);
+textarea:focus-visible {
+    outline: transparent;
 }
 
 h1 {
     color: #0081AD;
     font-size: 40px;
-}
-
-button {
-    border-radius: 50px;
-    font-family: 'Patrick Hand', cursive;
-    background: linear-gradient(90deg, #00B3D7, #007EA1);
-    padding: 10px 20px;
-    border: none;
-    box-shadow: 1px 3px 5px #3E4A3C;
-    font-size: 25px;
-    color: #DDF8D7;
 }
 
 footer {
@@ -49,14 +49,47 @@ footer {
     width: 100%;
     background: url(./dandelion.png);
     background-size: contain;
-    height: 50px;
+    height: 5vh;
+    z-index: -1;
 }
-footer span{
-background-color: #007ea165;
-color: white;
-position: fixed;
-right: 0;
-bottom: 0;
-padding: 0 5px;
-font-size: 14px;
+
+footer span {
+    background-color: #007ea165;
+    color: white;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+button {
+    position: fixed;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    border-radius: 50px;
+    font-family: 'Patrick Hand', cursive;
+    background: radial-gradient(circle, #2D9584 0%, #3EA594 100%);
+    padding: 5px 20px;
+    border: none;
+    box-shadow: 1px 3px 5px #3E4A3C;
+    font-size: 25px;
+    color: #DDF8D7;
+}
+
+@media (max-width: 760px) {
+    #board {
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat !important;
+        background: url(./board_portrait.svg);
+        aspect-ratio: 0.6;
+    }
+
+    textarea {
+        margin-top: 7%;
+        width: 90%;
+        height: 75%;
+    }
 }
