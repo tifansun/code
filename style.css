@@ -29,7 +29,7 @@ textarea {
     font-family: 'Tilt Neon', cursive;
     font-size: 19px;
     resize: none;
-    overflow: scroll;
+    overflow: auto;
 }
 
 textarea:focus-visible {
